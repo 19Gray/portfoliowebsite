@@ -1,4 +1,3 @@
-
 import { Shield, Award, Code, Target, Users, Zap } from "lucide-react"
 
 const AboutPage = () => {
@@ -12,9 +11,9 @@ const AboutPage = () => {
   ]
 
   const certifications = [
-    "CEH - Certified Ethical Hacker",
-    "ALX SWE - Certified Software Engineer",
-    "BsC. Information Technology - Programmer"
+    "CEH - Certified Ethical Hacker : Cisco Networking Academy",
+    "ALX SWE - Certified Software Engineer : African Leadership Expirience",
+    "BsC. Information Technology - Programmer : Karatina University"
   ]
 
   return (

@@ -4,30 +4,7 @@ import { ExternalLink, Shield, Bug, Network, Terminal, Target, Eye, Zap, Code } 
 
 const ProjectsPage = () => {
   const projects = [
-    {
-      title: "Advanced Threat Simulation",
-      description:
-        "Comprehensive penetration testing engagement targeting financial institution infrastructure. Multi-phase assessment including network reconnaissance, vulnerability analysis, and security control validation.",
-      icon: Target,
-      tags: ["Penetration Testing", "Financial Sector", "Security Assessment"],
-      status: "COMPLETED",
-      impact: "Identified 12 critical vulnerabilities",
-      threatLevel: "HIGH",
-      duration: "6 weeks",
-      scope: "3,000+ endpoints",
-    },
-    {
-      title: "Healthcare Security Assessment",
-      description:
-        "Security evaluation of healthcare network infrastructure focusing on medical device security, patient data protection, and HIPAA compliance validation through comprehensive testing.",
-      icon: Shield,
-      tags: ["Healthcare Security", "Medical Devices", "HIPAA Compliance"],
-      status: "COMPLETED",
-      impact: "15 vulnerabilities in medical devices identified",
-      threatLevel: "HIGH",
-      duration: "4 weeks",
-      scope: "500+ medical devices",
-    },
+
     {
       title: "Network Penetration Testing",
       description:
