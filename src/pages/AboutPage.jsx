@@ -12,8 +12,8 @@ const AboutPage = () => {
 
   const certifications = [
     "CEH - Certified Ethical Hacker : Cisco Networking Academy",
-    "ALX SWE - Certified Software Engineer : African Leadership Expirience",
-    "BsC. Information Technology - Programmer : Karatina University"
+    "ALX SWE - Certified Software Engneer Back-end Specialization",
+    "BsC. Information Technology - Programming Major"
   ]
 
   return (
