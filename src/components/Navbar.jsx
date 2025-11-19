@@ -13,8 +13,8 @@ const Navbar = () => {
     <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-12">
-          <Link to="/" className="text-xl font-bold text-gray-900">
-            GRAY
+          <Link to="/" className="text-xl font-bold text-gray-700">
+            itsDennis
           </Link>
 
           <div className="flex space-x-8">

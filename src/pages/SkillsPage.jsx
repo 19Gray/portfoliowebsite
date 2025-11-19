@@ -7,14 +7,14 @@ const SkillsPage = () => {
   const [currentSkillIndex, setCurrentSkillIndex] = useState(0)
 
   const redTeamSkills = [
-    { name: "RECONNAISSANCE", level: 95, icon: Eye, color: "#ff0040" },
-    { name: "WEAPONIZATION", level: 90, icon: Zap, color: "#ff4000" },
-    { name: "DELIVERY", level: 88, icon: Target, color: "#ff8000" },
-    { name: "EXPLOITATION", level: 95, icon: Lock, color: "#ffbf00" },
-    { name: "INSTALLATION", level: 92, icon: Shield, color: "#80ff00" },
-    { name: "C2 OPERATIONS", level: 94, icon: Terminal, color: "#00ff80" },
-    { name: "(AOO)", level: 80, icon: Target, color: "#00ffff" },
-    { name: "PERSISTENCE", level: 87, icon: Lock, color: "#0080ff" },
+    { name: "RECON",  icon: Eye, color: "#ff0040" },
+    { name: "WEAPONIZATION",  icon: Zap, color: "#ff4000" },
+    { name: "DELIVERY",  icon: Target, color: "#ff8000" },
+    { name: "EXPLOITATION",  icon: Lock, color: "#ffbf00" },
+    { name: "INSTALLATION",  icon: Shield, color: "#80ff00" },
+    { name: "C2 OPERATIONS",  icon: Terminal, color: "#00ff80" },
+    { name: "(AOO)",  icon: Target, color: "#00ffff" },
+    { name: "PERSISTENCE",  icon: Lock, color: "#0080ff" },
   ]
 
   const hackingTools = [
@@ -36,75 +36,9 @@ const SkillsPage = () => {
     { name: "Postman", category: "API Analysis", threat: "LOW"},
     { name: "Mitre Att&ck", category: "Framework", threat: "HIGH"},
     { name: "Arch Linux", category: "Operating System", threat: "HIGH"},
-    { name: "Vim", category: "Text Editor", threat: "MEDIUM"},
     { name: "Gophish", category: "Phishing", threat: "HIGH"},
     { name: "LaZagne", category: "Credential Access", threat: "HIGH"},
-    { name: "C", category: "Exploit Development", threat: "CRITICAL"},
   ]
-
-  useEffect(() => {
-    const canvas = canvasRef.current
-    if (!canvas) return
-
-    const ctx = canvas.getContext("2d")
-    const centerX = canvas.width / 2
-    const centerY = canvas.height / 2
-    const maxRadius = Math.min(centerX, centerY) - 60
-
-    const drawCyberRadar = () => {
-      ctx.fillStyle = "rgba(0, 0, 0, 0.95)"
-      ctx.fillRect(0, 0, canvas.width, canvas.height)
-
-      for (let i = 1; i <= 5; i++) {
-        ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 + i * 0.1})`
-        ctx.lineWidth = 1
-        ctx.shadowColor = "#00ffff"
-        ctx.shadowBlur = 5
-        ctx.beginPath()
-        ctx.arc(centerX, centerY, (maxRadius * i) / 5, 0, 2 * Math.PI)
-        ctx.stroke()
-      }
-
-      ctx.shadowBlur = 0
-      redTeamSkills.forEach((skill, index) => {
-        const angle = (index * 45 * Math.PI) / 180
-        const radius = (skill.level / 100) * maxRadius
-
-        ctx.strokeStyle = skill.color
-        ctx.lineWidth = 2
-        ctx.beginPath()
-        ctx.moveTo(centerX, centerY)
-        ctx.lineTo(
-          centerX + Math.cos(angle - Math.PI / 2) * maxRadius,
-          centerY + Math.sin(angle - Math.PI / 2) * maxRadius,
-        )
-        ctx.stroke()
-
-        const x = centerX + Math.cos(angle - Math.PI / 2) * radius
-        const y = centerY + Math.sin(angle - Math.PI / 2) * radius
-
-        ctx.fillStyle = skill.color
-        ctx.shadowColor = skill.color
-        ctx.shadowBlur = 10
-        ctx.beginPath()
-        ctx.arc(x, y, 4, 0, 2 * Math.PI)
-        ctx.fill()
-
-        ctx.shadowBlur = 0
-        ctx.fillStyle = "#ffffff"
-        ctx.font = "10px 'Courier New', monospace"
-        ctx.textAlign = "center"
-        const labelX = centerX + Math.cos(angle - Math.PI / 2) * (maxRadius + 30)
-        const labelY = centerY + Math.sin(angle - Math.PI / 2) * (maxRadius + 30)
-        ctx.fillText(skill.name, labelX, labelY)
-        ctx.fillText(`${skill.level}%`, labelX, labelY + 12)
-      })
-    }
-
-    drawCyberRadar()
-    const interval = setInterval(drawCyberRadar, 100)
-    return () => clearInterval(interval)
-  }, [])
 
   return (
     <div className="space-y-8">
@@ -129,16 +63,7 @@ const SkillsPage = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="glass-morphism p-6 rounded-2xl mb-8"
         >
-          <h2 className="text-xl font-bold text-center mb-6 text-primary">Kill Chain Proficiency Matrix</h2>
-          <div className="flex justify-center mb-6">
-            <canvas
-              ref={canvasRef}
-              width={300}
-              height={300}
-              className="max-w-full h-auto border border-primary/30 rounded"
-            />
-          </div>
-
+          <h2 className="text-xl font-bold text-center mb-6 text-primary">Proficiency Matrix</h2>
           <div className="grid grid-cols-4 md:grid-cols-8 gap-3">
             {redTeamSkills.map((skill, index) => {
               const Icon = skill.icon
@@ -146,7 +71,6 @@ const SkillsPage = () => {
                 <div key={index} className="glass-morphism p-3 rounded-xl text-center apple-hover">
                   <Icon className="w-5 h-5 mx-auto mb-2 text-primary" />
                   <div className="text-foreground font-semibold text-xs">{skill.name.split(" ")[0]}</div>
-                  <div className="text-primary font-bold text-xs">{skill.level}%</div>
                 </div>
               )
             })}

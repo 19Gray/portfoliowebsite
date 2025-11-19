@@ -1,57 +1,43 @@
-"use client"
 
 import { ExternalLink, Shield, Bug, Network, Terminal, Target, Eye, Zap, Code } from "lucide-react"
 
 const ProjectsPage = () => {
   const projects = [
-
     {
-      title: "Network Penetration Testing",
-      description:
-        "Comprehensive penetration testing of enterprise network using advanced testing techniques, security control bypass methods, and custom security tool development.",
-      icon: Eye,
-      tags: ["Network Security", "Enterprise Testing", "Custom Tools"],
-      status: "COMPLETED",
-      impact: "Successfully bypassed multiple security layers",
-      threatLevel: "HIGH",
-      duration: "8 weeks",
-      scope: "Enterprise network",
-    },
-    {
-      title: "Infrastructure Security Testing",
+      title: "Bug Bounty Hunting",
       description:
         "Large-scale security assessment simulating advanced attack patterns against critical infrastructure, including industrial control systems and network security evaluation.",
       icon: Zap,
-      tags: ["Critical Infrastructure", "Industrial Systems", "Security Testing"],
-      status: "COMPLETED",
-      impact: "Demonstrated security gaps in critical systems",
+      tags: ["Hacker1", "Bugcrowd", "Security Testing", "Bug Bounties"],
+      status: "ONGOING",
+      impact: "Demonstrating security gaps in critical systems",
       threatLevel: "HIGH",
-      duration: "12 weeks",
-      scope: "Multi-site infrastructure",
+      duration: "ONGOING",
+      scope: "Multi-site",
     },
     {
       title: "Web Application Security",
       description:
         "Comprehensive web application security testing focusing on vulnerability discovery, security flaw analysis, and business logic testing against e-commerce platform.",
       icon: Bug,
-      tags: ["Web Security", "E-commerce", "Vulnerability Research"],
+      tags: ["Web Security", "E-commerce", "Vulnerability Research", "Portswinger Academy"],
       status: "ONGOING",
       impact: "3 critical vulnerabilities discovered",
       threatLevel: "HIGH",
       duration: "Ongoing",
-      scope: "Multi-million user platform",
+      scope: "ROE predefined",
     },
     {
-      title: "Active Directory Assessment",
+      title: "Hands-On Training",
       description:
-        "Internal network security testing with focus on Active Directory security, authentication system analysis, and domain security evaluation in enterprise environment.",
+        "Basic cybersecurity training",
       icon: Network,
-      tags: ["Active Directory", "Authentication Security", "Enterprise"],
-      status: "COMPLETED",
-      impact: "Complete security assessment of AD infrastructure",
+      tags: ["Hack the Box", "Try Hack Me", "VulnHub", "CTFs"],
+      status: "ONGOING",
+      impact: "Skill Up",
       threatLevel: "HIGH",
-      duration: "3 weeks",
-      scope: "10,000+ domain users",
+      duration: "ONGOING",
+      scope: "N/A",
     },
     {
       title: "MEDREF",

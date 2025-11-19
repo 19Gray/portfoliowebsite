@@ -11,14 +11,14 @@ const AboutPage = () => {
   ]
 
   const certifications = [
-    "CEH - Certified Ethical Hacker : Cisco Networking Academy",
-    "ALX SWE - Certified Software Engneer Back-end Specialization",
-    "BsC. Information Technology - Programming Major"
+    "African Leadership Expirience (ALX) - Software Engineering (Back-end) Specialization",
+    "BsC. Information Technology - Programming Major",
+    "API penetration testing - APISEC"
   ]
 
   return (
-    <div className="min-h-screen py-8 px-6">
-      <div className="max-w-6xl mx-auto">
+    <div className="space-y-8">
+      <div className="max-w-6xl mx-auto space-y-8">
         <div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -26,7 +26,7 @@ const AboutPage = () => {
           className="text-center mb-8"
         >
           <h1 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            About Gray
+            About :
           </h1>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Cybersecurity Engineer with 4+ years of experience in offensive security, penetration testing, and red

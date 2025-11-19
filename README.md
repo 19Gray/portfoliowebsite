@@ -7,5 +7,3 @@
 ### *Bug Bounty Hunter*
 
 ### *Red Teamer*
-
-
