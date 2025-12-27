@@ -30,7 +30,7 @@ const SkillsPage = () => {
     { name: "Responder", category: "Network Poisoning", threat: "HIGH" },
     { name: "Mimikatz", category: "Credential Dumping", threat: "CRITICAL" },
     { name: "PowerShell Empire", category: "Living off Land", threat: "HIGH" },
-    { name: "Python", category: "Scripting", threat: "HIGH"},
+    { name: "Rust", category: "Exploit Development", threat: "HIGH"},
     { name: "Bash", category: "Scripting", threat: "MEDIUM"},
     { name: "Maltego", category: "OSINT", threat: "HIGH"},
     { name: "Postman", category: "API Analysis", threat: "LOW"},
