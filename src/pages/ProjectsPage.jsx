@@ -8,9 +8,31 @@ import {
   Eye,
   Zap,
   Code,
+  Github,
 } from "lucide-react";
+import { motion } from "framer-motion";
 
 const ProjectsPage = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
   const projects = [
     {
       title: "Bug Bounty Hunting",
@@ -23,6 +45,7 @@ const ProjectsPage = () => {
       threatLevel: "HIGH",
       duration: "ONGOING",
       scope: "Multi-site",
+      githubUrl: "https://github.com/19Gray/bug-bounty",
     },
     {
       title: "Web Application Security",
@@ -40,10 +63,11 @@ const ProjectsPage = () => {
       threatLevel: "HIGH",
       duration: "Ongoing",
       scope: "ROE predefined",
+      githubUrl: "https://github.com/19Gray/web-app-security",
     },
     {
       title: "Hands-On Training",
-      description: "Basic cybersecurity training",
+      description: "Basic cybersecurity training and CTF challenges",
       icon: Network,
       tags: ["Hack the Box", "Try Hack Me", "VulnHub", "CTFs"],
       status: "ONGOING",
@@ -51,6 +75,7 @@ const ProjectsPage = () => {
       threatLevel: "HIGH",
       duration: "ONGOING",
       scope: "N/A",
+      githubUrl: "https://github.com/19Gray/ctf-training",
     },
     {
       title: "MEDREF",
@@ -63,11 +88,12 @@ const ProjectsPage = () => {
       threatLevel: "HIGH",
       duration: "4 months",
       scope: "Software Development",
+      githubUrl: "https://github.com/19Gray/medref",
     },
     {
       title: "Lipa na Mpesa API",
       description:
-        "Creted a lipa na mpesa API gateway to streamline online paments through mobile platforms",
+        "Created a lipa na mpesa API gateway to streamline online payments through mobile platforms",
       icon: Code,
       tags: ["Backend Development", "API Security", "Code"],
       status: "COMPLETED",
@@ -75,176 +101,202 @@ const ProjectsPage = () => {
       threatLevel: "HIGH",
       duration: "2 months",
       scope: "Software Development",
+      githubUrl: "https://github.com/19Gray/lipa-na-mpesa",
     },
     {
-      title: "Scripting",
+      title: "Scripting & Automation",
       description:
-        "Creating custom Burp extentions for effective web exploitation and enumeration, custom Maltego transforms for effective OSINT",
+        "Creating custom Burp extensions for effective web exploitation and enumeration, custom Maltego transforms for effective OSINT",
       icon: Code,
       tags: ["Scripting", "Automation"],
       status: "ONGOING",
-      impact: "Vulnrebilities Discloser, Skills Gain",
+      impact: "Vulnerabilities Discloser, Skills Gain",
       threatLevel: "MEDIUM",
       duration: "3 months",
       scope: "Ongoing",
+      githubUrl: "https://github.com/19Gray/burp-scripts",
     },
     {
       title: "purionX",
       description:
-        "A blazing-fast, zero-dependency static analysis tool written in Rust. Detects OWASP Top 10 vulnerabilities in your codebase to help you secure applications before they go live. Lightweight, reliable, and designed for developers who value speed and simplicity. ",
+        "A blazing-fast, zero-dependency static analysis tool written in Rust. Detects OWASP Top 10 vulnerabilities in your codebase to help you secure applications before they go live. Lightweight, reliable, and designed for developers who value speed and simplicity.",
       icon: Terminal,
-      tags: ["Scripting", "Automation"],
+      tags: ["Rust", "Static Analysis", "OWASP"],
       status: "Completed",
-      impact: "Vulnrebilities Discloser, Skills Gain",
+      impact: "Vulnerabilities Discloser, Skills Gain",
       threatLevel: "High",
       duration: "3 months",
       scope: "OWASP",
+      githubUrl: "https://github.com/19Gray/purionX",
     },
   ];
 
   const getThreatColor = (level) => {
     switch (level) {
       case "CRITICAL":
-        return "text-red-400 border-red-400/30 bg-red-500/20";
+        return "text-destructive border-destructive/30 bg-destructive/10";
       case "HIGH":
-        return "text-orange-400 border-orange-400/30 bg-orange-500/20";
+        return "text-orange-600 border-orange-600/30 bg-orange-100";
       case "MEDIUM":
-        return "text-yellow-400 border-yellow-400/30 bg-yellow-500/20";
+        return "text-amber-600 border-amber-600/30 bg-amber-100";
       default:
-        return "text-green-400 border-green-400/30 bg-green-500/20";
+        return "text-green-600 border-green-600/30 bg-green-100";
     }
   };
 
   const getStatusColor = (status) => {
     switch (status) {
       case "COMPLETED":
-        return "text-green-400 border-green-400/30 bg-green-500/20";
+        return "text-green-600 border-green-600/30 bg-green-100";
       case "ONGOING":
-        return "text-yellow-400 border-yellow-400/30 bg-yellow-500/20";
+        return "text-amber-600 border-amber-600/30 bg-amber-100";
       default:
-        return "text-blue-400 border-blue-400/30 bg-blue-500/20";
+        return "text-primary border-primary/30 bg-primary/10";
     }
   };
 
   return (
-    <div className="space-y-8">
-      <div className="max-w-6xl mx-auto space-y-8">
-        <div
+    <div className="space-y-12">
+      <div className="max-w-6xl mx-auto space-y-12">
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-8"
         >
-          <h1 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
             Security Projects
           </h1>
-          <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             Professional cybersecurity assessments and penetration testing
             engagements
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 mb-8">
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={containerVariants}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8"
+        >
           {projects.map((project, index) => {
             const Icon = project.icon;
             return (
-              <div
+              <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.1 * index }}
-                className="glass-morphism p-6 rounded-2xl apple-hover group flex flex-col"
+                variants={itemVariants}
+                whileHover={{ y: -6 }}
+                className="glass-morphism p-4 sm:p-6 rounded-2xl apple-hover apple-shadow group flex flex-col border border-primary/10"
               >
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex items-center space-x-3">
-                    <Icon className="w-6 h-6 text-primary flex-shrink-0" />
+                <div className="flex flex-col sm:flex-row items-start justify-between mb-4 gap-2">
+                  <div className="flex items-center space-x-2 sm:space-x-3">
+                    <div className="p-2 rounded-lg bg-accent/20 group-hover:bg-accent/30 transition-all duration-300">
+                      <Icon className="w-4 sm:w-5 h-4 sm:h-5 text-primary flex-shrink-0" />
+                    </div>
                     <span
-                      className={`px-3 py-1 rounded-xl border text-xs font-bold ${getThreatColor(project.threatLevel)}`}
+                      className={`px-2 sm:px-3 py-1 rounded-lg border text-xs font-bold ${getThreatColor(project.threatLevel)}`}
                     >
                       {project.threatLevel}
                     </span>
                   </div>
                   <span
-                    className={`px-3 py-1 rounded-xl border text-xs font-bold ${getStatusColor(project.status)}`}
+                    className={`px-2 sm:px-3 py-1 rounded-lg border text-xs font-bold ${getStatusColor(project.status)}`}
                   >
                     {project.status}
                   </span>
                 </div>
 
-                <h3 className="text-lg font-bold mb-3 group-hover:text-primary transition-colors text-foreground">
-                  {project.title}
-                </h3>
+                <div className="flex items-start gap-2 mb-3 group-hover:text-primary transition-colors">
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-base sm:text-lg font-bold text-foreground group-hover:text-primary transition-colors flex items-center gap-1 sm:gap-2 group/link"
+                  >
+                    {project.title}
+                    <Github className="w-3 sm:w-4 h-3 sm:h-4 opacity-0 group-hover/link:opacity-100 transition-opacity flex-shrink-0" />
+                  </a>
+                </div>
 
-                <p className="text-muted-foreground mb-4 leading-relaxed flex-grow text-sm">
+                <p className="text-muted-foreground mb-4 leading-relaxed flex-grow text-xs sm:text-sm">
                   {project.description}
                 </p>
 
-                <div className="glass-morphism p-4 rounded-xl mb-4">
-                  <div className="grid grid-cols-2 gap-4 text-sm">
+                <div className="glass-morphism p-3 sm:p-4 rounded-xl mb-4 border border-border/50">
+                  <div className="grid grid-cols-2 gap-3 sm:gap-4 text-xs sm:text-sm">
                     <div>
-                      <span className="text-primary font-semibold">
-                        Duration:
+                      <span className="text-primary font-semibold text-xs block mb-1">
+                        Duration
                       </span>
-                      <div className="text-foreground">{project.duration}</div>
+                      <div className="text-foreground text-xs sm:text-sm">
+                        {project.duration}
+                      </div>
                     </div>
                     <div>
-                      <span className="text-primary font-semibold">Scope:</span>
-                      <div className="text-foreground">{project.scope}</div>
+                      <span className="text-primary font-semibold text-xs block mb-1">
+                        Scope
+                      </span>
+                      <div className="text-foreground text-xs sm:text-sm">
+                        {project.scope}
+                      </div>
                     </div>
                   </div>
                 </div>
 
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-1 sm:gap-2 mb-4">
                   {project.tags.map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
-                      className="px-3 py-1 glass-morphism text-primary rounded-xl text-xs font-medium"
+                      className="px-2 sm:px-3 py-1 bg-primary/10 text-primary rounded-lg text-xs font-medium border border-primary/20"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                <div className="border-t border-border pt-4 mt-auto">
-                  <p className="text-sm text-primary mb-2 font-semibold">
+                <div className="border-t border-border/50 pt-3 sm:pt-4 mt-auto">
+                  <p className="text-xs sm:text-sm text-primary mb-1 font-semibold">
                     Project Impact:
                   </p>
-                  <p className="text-accent font-semibold text-sm">
+                  <p className="font-semibold text-xs sm:text-sm text-foreground">
                     {project.impact}
                   </p>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
 
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-center"
         >
-          <div className="glass-morphism p-8 rounded-2xl">
-            <Terminal className="w-12 h-12 text-primary mx-auto mb-4" />
-            <h2 className="text-2xl font-bold mb-4 text-primary">
-              Collaboration & Networking
+          <div className="glass-morphism p-4 sm:p-6 md:p-8 rounded-2xl apple-shadow border border-primary/10">
+            <div className="p-2 sm:p-3 rounded-xl bg-accent/20 w-fit mx-auto mb-3 sm:mb-4">
+              <Terminal className="w-6 sm:w-8 h-6 sm:h-8 text-primary" />
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4 text-foreground">
+              Let's Connect
             </h2>
-            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Connect with me for cybersecurity discussions, CTF tournaments,
-              <br />
-              and professional networking in the red team community
+            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto leading-relaxed text-sm sm:text-base">
+              I'm always interested in discussing cybersecurity, collaborating
+              on CTF tournaments, and networking with the red team community.
             </p>
-            <a
+            <motion.a
               href="https://discordapp.com/users/1106104232949600308"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-8 py-4 bg-primary text-primary-foreground rounded-xl font-semibold apple-hover cyber-glow group"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center px-6 sm:px-8 py-2 sm:py-3 bg-primary text-primary-foreground rounded-xl font-semibold text-sm sm:text-base apple-hover cyber-glow group"
             >
               Get In Touch
-              <ExternalLink className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </a>
+              <ExternalLink className="ml-1 sm:ml-2 w-3 sm:w-4 h-3 sm:h-4 group-hover:translate-x-1 transition-transform" />
+            </motion.a>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

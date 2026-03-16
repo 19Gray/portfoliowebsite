@@ -1,8 +1,8 @@
-import { Routes, Route } from "react-router-dom"
-import Layout from "./components/Layout.jsx"
-import AboutPage from "./pages/AboutPage.jsx"
-import ProjectsPage from "./pages/ProjectsPage.jsx"
-import SkillsPage from "./pages/SkillsPage.jsx"
+import { Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout.jsx";
+import AboutPage from "./pages/AboutPage.jsx";
+import ProjectsPage from "./pages/ProjectsPage.jsx";
+import SkillsPage from "./pages/SkillsPage.jsx";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         <Route path="/skills" element={<SkillsPage />} />
       </Routes>
     </Layout>
-  )
+  );
 }
 
-export default App
+export default App;

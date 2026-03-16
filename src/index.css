@@ -10,31 +10,32 @@
 }
 
 :root {
-  --background: 0 0% 0%; /* Pure black background */
-  --foreground: 0 0% 100%; /* Pure white text */
-  --card: 220 13% 8%; /* Very dark gray cards */
-  --card-foreground: 0 0% 100%; /* White text on cards */
-  --popover: 220 13% 8%; /* Dark gray popovers */
-  --popover-foreground: 0 0% 100%; /* White text on popovers */
-  --primary: 0 100% 50%; /* Red primary color */
+  /* Coffee-inspired color palette */
+  --background: 36 33% 97%; /* Cream/Off-white background */
+  --foreground: 19 27% 20%; /* Dark espresso text */
+  --card: 0 0% 100%; /* Pure white cards */
+  --card-foreground: 19 27% 20%; /* Espresso text on cards */
+  --popover: 0 0% 100%; /* White popovers */
+  --popover-foreground: 19 27% 20%; /* Espresso text on popovers */
+  --primary: 20 57% 45%; /* Roasted brown primary */
   --primary-foreground: 0 0% 100%; /* White text on primary */
-  --secondary: 220 13% 18%; /* Dark gray secondary */
-  --secondary-foreground: 0 0% 100%; /* White text on secondary */
-  --muted: 220 13% 12%; /* Very dark muted */
-  --muted-foreground: 0 0% 70%; /* Light gray muted text */
-  --accent: 0 100% 50%; /* Red accent */
-  --accent-foreground: 0 0% 100%; /* White text on accent */
-  --destructive: 0 100% 50%; /* Red destructive */
+  --secondary: 27 47% 72%; /* Latte secondary */
+  --secondary-foreground: 19 27% 20%; /* Espresso text on secondary */
+  --muted: 0 0% 85%; /* Light gray muted */
+  --muted-foreground: 0 0% 45%; /* Medium gray muted text */
+  --accent: 26 81% 63%; /* Warm accent (lighter brown) */
+  --accent-foreground: 19 27% 20%; /* Espresso text on accent */
+  --destructive: 0 84% 60%; /* Subtle red */
   --destructive-foreground: 0 0% 100%; /* White text on destructive */
-  --border: 220 13% 18%; /* Dark gray borders */
-  --input: 220 13% 8%; /* Dark input backgrounds */
-  --ring: 0 100% 50%; /* Red focus rings */
-  --chart-1: 0 100% 50%; /* Red chart color */
-  --chart-2: 0 100% 40%; /* Darker red chart color */
-  --chart-3: 0 100% 60%; /* Lighter red chart color */
-  --chart-4: 220 13% 40%; /* Gray chart color */
-  --chart-5: 0 100% 35%; /* Dark red chart color */
-  --radius: 0.5rem;
+  --border: 0 0% 85%; /* Light gray borders */
+  --input: 0 0% 97%; /* Very light input backgrounds */
+  --ring: 20 57% 45%; /* Brown focus rings */
+  --chart-1: 20 57% 45%; /* Roasted brown */
+  --chart-2: 27 47% 72%; /* Latte */
+  --chart-3: 36 33% 97%; /* Cream */
+  --chart-4: 0 0% 85%; /* Light gray */
+  --chart-5: 19 27% 20%; /* Espresso */
+  --radius: 0.75rem;
 }
 
 * {
@@ -45,7 +46,7 @@ body {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
   font-family: var(--font-open-sans);
-  /* Removed overflow-hidden to enable body scrolling */
+  letter-spacing: -0.3px;
 }
 
 .font-montserrat {
@@ -56,7 +57,7 @@ body {
   font-family: var(--font-open-sans);
 }
 
-/* Matrix background styles */
+/* Coffee-inspired background with subtle gradient */
 .matrix-bg {
   position: fixed;
   top: 0;
@@ -64,36 +65,35 @@ body {
   width: 100%;
   height: 100%;
   z-index: -1;
-  /* Updated to black background with subtle red gradient */
-  background: linear-gradient(135deg, #000000 0%, #0a0000 50%, #1a0000 100%);
+  background: linear-gradient(135deg, #F5E6DA 0%, #FFF7F1 50%, #FAF3ED 100%);
 }
 
-/* Updated glow effects to use red colors instead of cyan */
+/* Warm glow effects for coffee theme */
 .cyber-glow {
-  box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+  box-shadow: 0 0 20px rgba(111, 78, 55, 0.15);
 }
 
 .cyber-glow-cyan {
-  box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+  box-shadow: 0 0 20px rgba(196, 164, 132, 0.2);
 }
 
 .cyber-glow-yellow {
-  box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+  box-shadow: 0 0 20px rgba(196, 164, 132, 0.15);
 }
 
 .cyber-glow-red {
-  box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+  box-shadow: 0 0 20px rgba(111, 78, 55, 0.15);
 }
 
 .cyber-glow-pink {
-  box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+  box-shadow: 0 0 20px rgba(196, 164, 132, 0.2);
 }
 
-/* Updated glass morphism to use dark backgrounds with red accents */
+/* Soft glassmorphism with warm tones */
 .glass-morphism {
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(196, 164, 132, 0.2);
 }
 
 .apple-hover {
@@ -101,27 +101,26 @@ body {
 }
 
 .apple-hover:hover {
-  transform: translateY(-2px);
-  /* Updated hover shadow to red */
-  box-shadow: 0 8px 25px rgba(255, 0, 0, 0.15);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(111, 78, 55, 0.1);
 }
 
 .apple-shadow {
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(59, 47, 47, 0.08);
 }
 
 .apple-shadow-lg {
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 24px rgba(59, 47, 47, 0.12);
 }
 
-/* Animations */
+/* Smooth animations */
 @keyframes float {
   0%,
   100% {
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
   }
 }
 
@@ -129,14 +128,14 @@ body {
   animation: float 3s ease-in-out infinite;
 }
 
-/* Updated pulse glow animation to red */
+/* Subtle pulse glow for coffee theme */
 @keyframes pulse-glow {
   0%,
   100% {
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+    box-shadow: 0 0 20px rgba(111, 78, 55, 0.1);
   }
   50% {
-    box-shadow: 0 0 30px rgba(255, 0, 0, 0.7);
+    box-shadow: 0 0 30px rgba(111, 78, 55, 0.2);
   }
 }
 
@@ -144,7 +143,7 @@ body {
   animation: pulse-glow 2s ease-in-out infinite;
 }
 
-/* Updated scrollbar styling to red gradient */
+/* Warm brown scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -154,10 +153,10 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, #ff0000, #cc0000);
+  background: linear-gradient(45deg, #C4A484, #6F4E37);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(45deg, #cc0000, #990000);
+  background: linear-gradient(45deg, #6F4E37, #4B3832);
 }
