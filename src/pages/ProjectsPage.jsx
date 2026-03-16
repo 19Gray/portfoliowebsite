@@ -66,18 +66,6 @@ const ProjectsPage = () => {
       githubUrl: "https://github.com/19Gray/web-app-security",
     },
     {
-      title: "Hands-On Training",
-      description: "Basic cybersecurity training and CTF challenges",
-      icon: Network,
-      tags: ["Hack the Box", "Try Hack Me", "VulnHub", "CTFs"],
-      status: "ONGOING",
-      impact: "Skill Up",
-      threatLevel: "HIGH",
-      duration: "ONGOING",
-      scope: "N/A",
-      githubUrl: "https://github.com/19Gray/ctf-training",
-    },
-    {
       title: "MEDREF",
       description:
         "Medical Referral Appointment System created to streamline and simplify the manual referral systems in hospitals",
@@ -113,7 +101,7 @@ const ProjectsPage = () => {
       impact: "Vulnerabilities Discloser, Skills Gain",
       threatLevel: "MEDIUM",
       duration: "3 months",
-      scope: "Ongoing",
+      scope: "ONGOING",
       githubUrl: "https://github.com/19Gray/burp-scripts",
     },
     {
