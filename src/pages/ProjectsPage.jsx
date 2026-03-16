@@ -1,5 +1,14 @@
-
-import { ExternalLink, Shield, Bug, Network, Terminal, Target, Eye, Zap, Code } from "lucide-react"
+import {
+  ExternalLink,
+  Shield,
+  Bug,
+  Network,
+  Terminal,
+  Target,
+  Eye,
+  Zap,
+  Code,
+} from "lucide-react";
 
 const ProjectsPage = () => {
   const projects = [
@@ -20,7 +29,12 @@ const ProjectsPage = () => {
       description:
         "Comprehensive web application security testing focusing on vulnerability discovery, security flaw analysis, and business logic testing against e-commerce platform.",
       icon: Bug,
-      tags: ["Web Security", "E-commerce", "Vulnerability Research", "Portswinger Academy"],
+      tags: [
+        "Web Security",
+        "E-commerce",
+        "Vulnerability Research",
+        "Portswinger Academy",
+      ],
       status: "ONGOING",
       impact: "3 critical vulnerabilities discovered",
       threatLevel: "HIGH",
@@ -29,8 +43,7 @@ const ProjectsPage = () => {
     },
     {
       title: "Hands-On Training",
-      description:
-        "Basic cybersecurity training",
+      description: "Basic cybersecurity training",
       icon: Network,
       tags: ["Hack the Box", "Try Hack Me", "VulnHub", "CTFs"],
       status: "ONGOING",
@@ -75,32 +88,43 @@ const ProjectsPage = () => {
       duration: "3 months",
       scope: "Ongoing",
     },
-  ]
-
+    {
+      title: "purionX",
+      description:
+        "A blazing-fast, zero-dependency static analysis tool written in Rust. Detects OWASP Top 10 vulnerabilities in your codebase to help you secure applications before they go live. Lightweight, reliable, and designed for developers who value speed and simplicity. ",
+      icon: Terminal,
+      tags: ["Scripting", "Automation"],
+      status: "Completed",
+      impact: "Vulnrebilities Discloser, Skills Gain",
+      threatLevel: "High",
+      duration: "3 months",
+      scope: "OWASP",
+    },
+  ];
 
   const getThreatColor = (level) => {
     switch (level) {
       case "CRITICAL":
-        return "text-red-400 border-red-400/30 bg-red-500/20"
+        return "text-red-400 border-red-400/30 bg-red-500/20";
       case "HIGH":
-        return "text-orange-400 border-orange-400/30 bg-orange-500/20"
+        return "text-orange-400 border-orange-400/30 bg-orange-500/20";
       case "MEDIUM":
-        return "text-yellow-400 border-yellow-400/30 bg-yellow-500/20"
+        return "text-yellow-400 border-yellow-400/30 bg-yellow-500/20";
       default:
-        return "text-green-400 border-green-400/30 bg-green-500/20"
+        return "text-green-400 border-green-400/30 bg-green-500/20";
     }
-  }
+  };
 
   const getStatusColor = (status) => {
     switch (status) {
       case "COMPLETED":
-        return "text-green-400 border-green-400/30 bg-green-500/20"
+        return "text-green-400 border-green-400/30 bg-green-500/20";
       case "ONGOING":
-        return "text-yellow-400 border-yellow-400/30 bg-yellow-500/20"
+        return "text-yellow-400 border-yellow-400/30 bg-yellow-500/20";
       default:
-        return "text-blue-400 border-blue-400/30 bg-blue-500/20"
+        return "text-blue-400 border-blue-400/30 bg-blue-500/20";
     }
-  }
+  };
 
   return (
     <div className="space-y-8">
@@ -115,13 +139,14 @@ const ProjectsPage = () => {
             Security Projects
           </h1>
           <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
-            Professional cybersecurity assessments and penetration testing engagements
+            Professional cybersecurity assessments and penetration testing
+            engagements
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 mb-8">
           {projects.map((project, index) => {
-            const Icon = project.icon
+            const Icon = project.icon;
             return (
               <div
                 key={index}
@@ -139,7 +164,9 @@ const ProjectsPage = () => {
                       {project.threatLevel}
                     </span>
                   </div>
-                  <span className={`px-3 py-1 rounded-xl border text-xs font-bold ${getStatusColor(project.status)}`}>
+                  <span
+                    className={`px-3 py-1 rounded-xl border text-xs font-bold ${getStatusColor(project.status)}`}
+                  >
                     {project.status}
                   </span>
                 </div>
@@ -148,12 +175,16 @@ const ProjectsPage = () => {
                   {project.title}
                 </h3>
 
-                <p className="text-muted-foreground mb-4 leading-relaxed flex-grow text-sm">{project.description}</p>
+                <p className="text-muted-foreground mb-4 leading-relaxed flex-grow text-sm">
+                  {project.description}
+                </p>
 
                 <div className="glass-morphism p-4 rounded-xl mb-4">
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div>
-                      <span className="text-primary font-semibold">Duration:</span>
+                      <span className="text-primary font-semibold">
+                        Duration:
+                      </span>
                       <div className="text-foreground">{project.duration}</div>
                     </div>
                     <div>
@@ -175,11 +206,15 @@ const ProjectsPage = () => {
                 </div>
 
                 <div className="border-t border-border pt-4 mt-auto">
-                  <p className="text-sm text-primary mb-2 font-semibold">Project Impact:</p>
-                  <p className="text-accent font-semibold text-sm">{project.impact}</p>
+                  <p className="text-sm text-primary mb-2 font-semibold">
+                    Project Impact:
+                  </p>
+                  <p className="text-accent font-semibold text-sm">
+                    {project.impact}
+                  </p>
                 </div>
               </div>
-            )
+            );
           })}
         </div>
 
@@ -191,7 +226,9 @@ const ProjectsPage = () => {
         >
           <div className="glass-morphism p-8 rounded-2xl">
             <Terminal className="w-12 h-12 text-primary mx-auto mb-4" />
-            <h2 className="text-2xl font-bold mb-4 text-primary">Collaboration & Networking</h2>
+            <h2 className="text-2xl font-bold mb-4 text-primary">
+              Collaboration & Networking
+            </h2>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
               Connect with me for cybersecurity discussions, CTF tournaments,
               <br />
@@ -210,7 +247,7 @@ const ProjectsPage = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ProjectsPage
+export default ProjectsPage;
