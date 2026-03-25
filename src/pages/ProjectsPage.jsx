@@ -153,7 +153,7 @@ const ProjectsPage = () => {
           className="text-center mb-8"
         >
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
-            Security Projects
+            Projects
           </h1>
           <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             Professional cybersecurity assessments and penetration testing
@@ -272,17 +272,31 @@ const ProjectsPage = () => {
               I'm always interested in discussing cybersecurity, collaborating
               on CTF tournaments, and networking with the red team community.
             </p>
-            <motion.a
-              href="https://discordapp.com/users/1106104232949600308"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center px-6 sm:px-8 py-2 sm:py-3 bg-primary text-primary-foreground rounded-xl font-semibold text-sm sm:text-base apple-hover cyber-glow group"
-            >
-              Get In Touch
-              <ExternalLink className="ml-1 sm:ml-2 w-3 sm:w-4 h-3 sm:h-4 group-hover:translate-x-1 transition-transform" />
-            </motion.a>
+            <div className="flex justify-center gap-4 flex-wrap">
+              <motion.a
+                href="https://discordapp.com/users/1106104232949600308"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center px-6 sm:px-8 py-2 sm:py-3 bg-primary text-primary-foreground rounded-xl font-semibold text-sm sm:text-base apple-hover cyber-glow group"
+              >
+                Get In Touch
+                <ExternalLink className="ml-1 sm:ml-2 w-3 sm:w-4 h-3 sm:h-4 group-hover:translate-x-1 transition-transform" />
+              </motion.a>
+
+              <motion.a
+                href="https://github.com/19Gray"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center px-6 sm:px-8 py-2 sm:py-3 bg-primary text-primary-foreground rounded-xl font-semibold text-sm sm:text-base apple-hover cyber-glow group"
+              >
+                Open Source
+                <ExternalLink className="ml-1 sm:ml-2 w-3 sm:w-4 h-3 sm:h-4 group-hover:translate-x-1 transition-transform" />
+              </motion.a>
+            </div>
           </div>
         </motion.div>
       </div>
