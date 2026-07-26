@@ -1,70 +1,70 @@
+import { motion } from 'framer-motion';
 import {
-  Shield,
   Award,
+  BookOpen,
   Code,
+  Image as ImageIcon,
+  Shield,
   Target,
+  Trophy,
   Users,
   Zap,
-  Trophy,
-  BookOpen,
-  Image as ImageIcon,
-} from "lucide-react";
-import { motion } from "framer-motion";
-import { useState } from "react";
+} from 'lucide-react';
+import { useState } from 'react';
 
 const AboutPage = () => {
   const [imageErrors, setImageErrors] = useState({});
   const skills = [
     {
       icon: Shield,
-      title: "Penetration Testing",
-      description: "Web applications, networks, and infrastructure",
+      title: 'Penetration Testing',
+      description: 'Web applications, networks, and infrastructure',
     },
     {
       icon: Code,
-      title: "Exploit Development",
-      description: "Custom payloads and proof-of-concepts",
+      title: 'Exploit Development',
+      description: 'Custom payloads and proof-of-concepts',
     },
     {
       icon: Target,
-      title: "Cyber Operations",
-      description: "Advanced persistent threat simulation",
+      title: 'Cyber Operations',
+      description: 'Advanced persistent threat simulation',
     },
     {
       icon: Users,
-      title: "Social Engineering",
-      description: "Human factor security assessments",
+      title: 'Social Engineering',
+      description: 'Human factor security assessments',
     },
     {
       icon: Zap,
-      title: "Incident Response",
-      description: "Threat hunting and forensic analysis",
+      title: 'Incident Response',
+      description: 'Threat hunting and forensic analysis',
     },
     {
       icon: Award,
-      title: "Compliance",
-      description: "Security frameworks and standards",
+      title: 'Compliance',
+      description: 'Security frameworks and standards',
     },
   ];
 
   const certifications = [
     {
-      name: "African Leadership Experience (ALX)",
-      credential: "Software Engineering (Back-end) Specialization",
+      name: 'African Leadership Experience (ALX)',
+      credential: 'Software Engineering (Back-end) Specialization',
       icon: BookOpen,
-      image: "/certificates/alx.png",
+      image: '/certificates/alx.png',
     },
     {
-      name: "Bachelor of Science - Information Technology",
-      credential: "Programming Major",
+      name: 'Bachelor of Science - Information Technology',
+      credential: 'Programming Major',
       icon: Trophy,
-      image: "/certificates/bsc-certificate.png",
+      image: '/certificates/bsc-certificate.png',
     },
     {
-      name: "API Penetration Testing",
-      credential: "APISEC Certification",
+      name: 'API Penetration Testing',
+      credential: 'APISEC Certification',
       icon: Award,
-      image: "/certificates/apisec.png",
+      image: '/certificates/apisec.png',
     },
   ];
 
@@ -84,7 +84,7 @@ const AboutPage = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
+      transition: { duration: 0.6, ease: 'easeOut' },
     },
   };
 
@@ -98,11 +98,11 @@ const AboutPage = () => {
           className="text-center mb-8"
         >
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 text-foreground">
-            About Me
+            About R00KE0
           </h1>
           <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed px-2">
-            Cybersecurity Engineer with 4+ years of experience in offensive
-            security, penetration testing, and red team operations.
+            Cybersecurity Engineer with 4+ years of experience in offensive security, penetration
+            testing, and red team operations.
           </p>
         </motion.div>
 
@@ -121,24 +121,18 @@ const AboutPage = () => {
               Professional Background
             </h2>
             <p className="text-muted-foreground mb-3 sm:mb-4 text-xs sm:text-sm leading-relaxed">
-              Specialized in offensive security operations with extensive
-              experience in penetration testing, vulnerability assessment, and
-              cyber operations across various industries including finance,
-              healthcare, and business sectors.
+              Specialized in offensive security operations with extensive experience in penetration
+              testing, vulnerability assessment, and cyber operations across various industries
+              including finance, healthcare, and business sectors.
             </p>
             <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">
-              Passionate about staying ahead of emerging threats and developing
-              innovative security solutions to protect organizations from
-              sophisticated cyber attacks.
+              Passionate about staying ahead of emerging threats and developing innovative security
+              solutions to protect organizations from sophisticated cyber attacks.
             </p>
           </motion.div>
         </motion.div>
 
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={containerVariants}
-        >
+        <motion.div initial="hidden" animate="visible" variants={containerVariants}>
           <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-10 text-foreground">
             Professional Certifications
           </h2>
@@ -160,20 +154,14 @@ const AboutPage = () => {
                         alt={cert.name}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                         onError={() => {
-                          setImageErrors((prev) => ({
+                          setImageErrors(prev => ({
                             ...prev,
                             [index]: true,
                           }));
-                          console.log(
-                            "[v0] Certificate image failed to load:",
-                            cert.image,
-                          );
+                          console.log('[v0] Certificate image failed to load:', cert.image);
                         }}
                         onLoad={() => {
-                          console.log(
-                            "[v0] Certificate image loaded:",
-                            cert.image,
-                          );
+                          console.log('[v0] Certificate image loaded:', cert.image);
                         }}
                       />
                     ) : (
@@ -209,11 +197,7 @@ const AboutPage = () => {
           </div>
         </motion.div>
 
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={containerVariants}
-        >
+        <motion.div initial="hidden" animate="visible" variants={containerVariants}>
           <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-10 text-foreground">
             Core Competencies
           </h2>

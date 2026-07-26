@@ -1,16 +1,5 @@
-import {
-  ExternalLink,
-  Shield,
-  Bug,
-  Network,
-  Terminal,
-  Target,
-  Eye,
-  Zap,
-  Code,
-  Github,
-} from "lucide-react";
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
+import { Bug, Code, ExternalLink, Github, Terminal, Zap } from 'lucide-react';
 
 const ProjectsPage = () => {
   const containerVariants = {
@@ -29,117 +18,112 @@ const ProjectsPage = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
+      transition: { duration: 0.6, ease: 'easeOut' },
     },
   };
 
   const projects = [
     {
-      title: "Bug Bounty Hunting",
+      title: 'Bug Bounty Hunting',
       description:
-        "Large-scale security assessment simulating advanced attack patterns against critical infrastructure, including industrial control systems and network security evaluation.",
+        'Large-scale security assessment simulating advanced attack patterns against critical infrastructure, including industrial control systems and network security evaluation.',
       icon: Zap,
-      tags: ["Hacker1", "Bugcrowd", "Security Testing", "Bug Bounties"],
-      status: "ONGOING",
-      impact: "Demonstrating security gaps in critical systems",
-      threatLevel: "HIGH",
-      duration: "ONGOING",
-      scope: "Multi-site",
-      githubUrl: "https://github.com/19Gray/bug-bounty",
+      tags: ['Hacker1', 'Bugcrowd', 'Security Testing', 'Bug Bounties'],
+      status: 'ONGOING',
+      impact: 'Demonstrating security gaps in critical systems',
+      threatLevel: 'HIGH',
+      duration: 'ONGOING',
+      scope: 'Multi-site',
+      githubUrl: 'https://github.com/R00KE0/bug-bounty',
     },
     {
-      title: "Web Application Security",
+      title: 'Web Application Security',
       description:
-        "Comprehensive web application security testing focusing on vulnerability discovery, security flaw analysis, and business logic testing against e-commerce platform.",
+        'Comprehensive web application security testing focusing on vulnerability discovery, security flaw analysis, and business logic testing against e-commerce platform.',
       icon: Bug,
-      tags: [
-        "Web Security",
-        "E-commerce",
-        "Vulnerability Research",
-        "Portswinger Academy",
-      ],
-      status: "ONGOING",
-      impact: "3 critical vulnerabilities discovered",
-      threatLevel: "HIGH",
-      duration: "Ongoing",
-      scope: "ROE predefined",
-      githubUrl: "https://github.com/19Gray/web-app-security",
+      tags: ['Web Security', 'E-commerce', 'Vulnerability Research', 'Portswinger Academy'],
+      status: 'ONGOING',
+      impact: '3 critical vulnerabilities discovered',
+      threatLevel: 'HIGH',
+      duration: 'Ongoing',
+      scope: 'ROE predefined',
+      githubUrl: 'https://github.com/R00KE0/web-app-security',
     },
     {
-      title: "MEDREF",
+      title: 'MEDREF',
       description:
-        "Medical Referral Appointment System created to streamline and simplify the manual referral systems in hospitals",
+        'Medical Referral Appointment System created to streamline and simplify the manual referral systems in hospitals',
       icon: Code,
-      tags: ["Backend Development", "API Security", "Code"],
-      status: "COMPLETED",
-      impact: "Completed the Automation referral",
-      threatLevel: "HIGH",
-      duration: "4 months",
-      scope: "Software Development",
-      githubUrl: "https://github.com/19Gray/medref",
+      tags: ['Backend Development', 'API Security', 'Code'],
+      status: 'COMPLETED',
+      impact: 'Completed the Automation referral',
+      threatLevel: 'HIGH',
+      duration: '4 months',
+      scope: 'Software Development',
+      githubUrl: 'https://github.com/R00KE0/medref',
     },
     {
-      title: "Lipa na Mpesa API",
+      title: 'Lipa na Mpesa API',
       description:
-        "Created a lipa na mpesa API gateway to streamline online payments through mobile platforms",
+        'Created a lipa na mpesa API gateway to streamline online payments through mobile platforms',
       icon: Code,
-      tags: ["Backend Development", "API Security", "Code"],
-      status: "COMPLETED",
-      impact: "OWASP top 10 best practices implementation",
-      threatLevel: "HIGH",
-      duration: "2 months",
-      scope: "Software Development",
-      githubUrl: "https://github.com/19Gray/lipa-na-mpesa",
+      tags: ['Backend Development', 'API Security', 'Code'],
+      status: 'COMPLETED',
+      impact: 'OWASP top 10 best practices implementation',
+      threatLevel: 'HIGH',
+      duration: '2 months',
+      scope: 'Software Development',
+      githubUrl: 'https://github.com/R00KE0/lipa-na-mpesa',
     },
     {
-      title: "Scripting & Automation",
+      title: 'Scripting & Automation',
       description:
-        "Creating custom Burp extensions for effective web exploitation and enumeration, custom Maltego transforms for effective OSINT",
+        'Creating custom Burp extensions for effective web exploitation and enumeration, custom Maltego transforms for effective OSINT',
       icon: Code,
-      tags: ["Scripting", "Automation"],
-      status: "ONGOING",
-      impact: "Vulnerabilities Discloser, Skills Gain",
-      threatLevel: "MEDIUM",
-      duration: "3 months",
-      scope: "ONGOING",
-      githubUrl: "https://github.com/19Gray/burp-scripts",
+      tags: ['Scripting', 'Automation'],
+      status: 'ONGOING',
+      impact: 'Vulnerabilities Discloser, Skills Gain',
+      threatLevel: 'MEDIUM',
+      duration: '3 months',
+      scope: 'ONGOING',
+      githubUrl: 'https://github.com/R00KE0/burp-scripts',
     },
     {
-      title: "purionX",
+      title: 'PURIONX',
       description:
-        "A blazing-fast, zero-dependency static analysis tool written in Rust. Detects OWASP Top 10 vulnerabilities in your codebase to help you secure applications before they go live. Lightweight, reliable, and designed for developers who value speed and simplicity.",
+        'A blazing-fast, zero-dependency static analysis tool written in Rust. Detects OWASP Top 10 vulnerabilities in your codebase to help you secure applications before they go live. Lightweight, reliable, and designed for developers who value speed and simplicity.',
       icon: Terminal,
-      tags: ["Rust", "Static Analysis", "OWASP"],
-      status: "Completed",
-      impact: "Vulnerabilities Discloser, Skills Gain",
-      threatLevel: "High",
-      duration: "3 months",
-      scope: "OWASP",
-      githubUrl: "https://github.com/19Gray/purionX",
+      tags: ['Rust', 'Static Analysis', 'OWASP'],
+      status: 'COMPLETED',
+      impact: 'Vulnerabilities Discloser, Skills Gain',
+      threatLevel: 'HIGH',
+      duration: '3 months',
+      scope: 'OWASP',
+      githubUrl: 'https://github.com/R00KE0/purionX',
     },
   ];
 
-  const getThreatColor = (level) => {
+  const getThreatColor = level => {
     switch (level) {
-      case "CRITICAL":
-        return "text-destructive border-destructive/30 bg-destructive/10";
-      case "HIGH":
-        return "text-orange-600 border-orange-600/30 bg-orange-100";
-      case "MEDIUM":
-        return "text-amber-600 border-amber-600/30 bg-amber-100";
+      case 'CRITICAL':
+        return 'text-destructive border-destructive/30 bg-destructive/10';
+      case 'HIGH':
+        return 'text-orange-600 border-orange-600/30 bg-orange-100';
+      case 'MEDIUM':
+        return 'text-amber-600 border-amber-600/30 bg-amber-100';
       default:
-        return "text-green-600 border-green-600/30 bg-green-100";
+        return 'text-green-600 border-green-600/30 bg-green-100';
     }
   };
 
-  const getStatusColor = (status) => {
+  const getStatusColor = status => {
     switch (status) {
-      case "COMPLETED":
-        return "text-green-600 border-green-600/30 bg-green-100";
-      case "ONGOING":
-        return "text-amber-600 border-amber-600/30 bg-amber-100";
+      case 'COMPLETED':
+        return 'text-green-600 border-green-600/30 bg-green-100';
+      case 'ONGOING':
+        return 'text-amber-600 border-amber-600/30 bg-amber-100';
       default:
-        return "text-primary border-primary/30 bg-primary/10";
+        return 'text-primary border-primary/30 bg-primary/10';
     }
   };
 
@@ -152,12 +136,9 @@ const ProjectsPage = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-8"
         >
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
-            Projects
-          </h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Projects</h1>
           <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Professional cybersecurity assessments and penetration testing
-            engagements
+            Professional cybersecurity assessments and penetration testing engagements
           </p>
         </motion.div>
 
@@ -216,17 +197,11 @@ const ProjectsPage = () => {
                       <span className="text-primary font-semibold text-xs block mb-1">
                         Duration
                       </span>
-                      <div className="text-foreground text-xs sm:text-sm">
-                        {project.duration}
-                      </div>
+                      <div className="text-foreground text-xs sm:text-sm">{project.duration}</div>
                     </div>
                     <div>
-                      <span className="text-primary font-semibold text-xs block mb-1">
-                        Scope
-                      </span>
-                      <div className="text-foreground text-xs sm:text-sm">
-                        {project.scope}
-                      </div>
+                      <span className="text-primary font-semibold text-xs block mb-1">Scope</span>
+                      <div className="text-foreground text-xs sm:text-sm">{project.scope}</div>
                     </div>
                   </div>
                 </div>
@@ -269,8 +244,8 @@ const ProjectsPage = () => {
               Let's Connect
             </h2>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto leading-relaxed text-sm sm:text-base">
-              I'm always interested in discussing cybersecurity, collaborating
-              on CTF tournaments, and networking with the red team community.
+              I'm always interested in discussing cybersecurity, collaborating on CTF tournaments,
+              and networking with the red team community.
             </p>
             <div className="flex justify-center gap-4 flex-wrap">
               <motion.a
@@ -286,7 +261,7 @@ const ProjectsPage = () => {
               </motion.a>
 
               <motion.a
-                href="https://github.com/19Gray"
+                href="https://github.com/R00KE0"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
