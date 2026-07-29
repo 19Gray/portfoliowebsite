@@ -98,11 +98,11 @@ const AboutPage = () => {
           className="text-center mb-8"
         >
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 text-foreground">
-            About R00KE0
+            R00KE0
           </h1>
           <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed px-2">
-            Cybersecurity Engineer with 4+ years of experience in offensive security, penetration
-            testing, and red team operations.
+            A Cybersecurity Engineer with experience in offensive security, penetration testing, and
+            red team operations.
           </p>
         </motion.div>
 

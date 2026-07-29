@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { Coffee } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
@@ -39,9 +38,6 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           <motion.div variants={itemVariants} className="flex items-center gap-2">
             <Link to="/" className="flex items-center gap-2 group">
-              <div className="p-2 rounded-lg bg-gradient-to-br from-primary to-accent group-hover:from-accent group-hover:to-primary transition-all duration-300">
-                <Coffee className="w-5 h-5 text-white" />
-              </div>
               <span className="text-lg font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 R00KE0
               </span>
