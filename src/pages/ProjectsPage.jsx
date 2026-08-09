@@ -34,7 +34,7 @@ const ProjectsPage = () => {
       threatLevel: 'HIGH',
       duration: 'ONGOING',
       scope: 'Multi-site',
-      githubUrl: 'https://github.com/R00KE0/bug-bounty',
+      githubUrl: 'https://github.com/its-Gray/bug-bounty',
     },
     {
       title: 'Web Application Security',
@@ -47,7 +47,7 @@ const ProjectsPage = () => {
       threatLevel: 'HIGH',
       duration: 'Ongoing',
       scope: 'ROE predefined',
-      githubUrl: 'https://github.com/R00KE0/web-app-security',
+      githubUrl: 'https://github.com/its-Gray/web-app-security',
     },
     {
       title: 'MEDREF',
@@ -60,7 +60,7 @@ const ProjectsPage = () => {
       threatLevel: 'HIGH',
       duration: '4 months',
       scope: 'Software Development',
-      githubUrl: 'https://github.com/R00KE0/medref',
+      githubUrl: 'https://github.com/its-Gray/medref',
     },
     {
       title: 'Lipa na Mpesa API',
@@ -73,7 +73,7 @@ const ProjectsPage = () => {
       threatLevel: 'HIGH',
       duration: '2 months',
       scope: 'Software Development',
-      githubUrl: 'https://github.com/R00KE0/lipa-na-mpesa',
+      githubUrl: 'https://github.com/its-Gray/lipa-na-mpesa',
     },
     {
       title: 'Scripting & Automation',
@@ -86,7 +86,7 @@ const ProjectsPage = () => {
       threatLevel: 'MEDIUM',
       duration: '3 months',
       scope: 'ONGOING',
-      githubUrl: 'https://github.com/R00KE0/burp-scripts',
+      githubUrl: 'https://github.com/its-Gray/burp-scripts',
     },
     {
       title: 'PURIONX',
@@ -99,7 +99,7 @@ const ProjectsPage = () => {
       threatLevel: 'HIGH',
       duration: '3 months',
       scope: 'OWASP',
-      githubUrl: 'https://github.com/R00KE0/purionX',
+      githubUrl: 'https://github.com/its-Gray/purionX',
     },
   ];
 
@@ -261,7 +261,7 @@ const ProjectsPage = () => {
               </motion.a>
 
               <motion.a
-                href="https://github.com/R00KE0"
+                href="https://github.com/its-Gray"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
