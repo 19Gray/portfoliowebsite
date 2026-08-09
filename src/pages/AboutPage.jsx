@@ -117,7 +117,7 @@ const AboutPage = () => {
                 Explore projects
               </a>
               <a
-                href="https://github.com/R00KE0"
+                href="https://github.com/its-Gray"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center rounded-lg border border-border px-5 py-3 text-sm font-semibold text-foreground hover:border-primary/60 hover:text-primary"
