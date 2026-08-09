@@ -108,20 +108,20 @@ const ProjectsPage = () => {
       case 'CRITICAL':
         return 'text-destructive border-destructive/30 bg-destructive/10';
       case 'HIGH':
-        return 'text-orange-600 border-orange-600/30 bg-orange-100';
+        return 'text-primary border-primary/30 bg-primary/10';
       case 'MEDIUM':
-        return 'text-amber-600 border-amber-600/30 bg-amber-100';
+        return 'text-accent border-accent/30 bg-accent/10';
       default:
-        return 'text-green-600 border-green-600/30 bg-green-100';
+        return 'text-muted-foreground border-border bg-muted';
     }
   };
 
   const getStatusColor = status => {
     switch (status) {
       case 'COMPLETED':
-        return 'text-green-600 border-green-600/30 bg-green-100';
+        return 'text-muted-foreground border-border bg-muted';
       case 'ONGOING':
-        return 'text-amber-600 border-amber-600/30 bg-amber-100';
+        return 'text-accent border-accent/30 bg-accent/10';
       default:
         return 'text-primary border-primary/30 bg-primary/10';
     }

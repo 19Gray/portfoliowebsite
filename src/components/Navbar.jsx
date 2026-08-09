@@ -32,7 +32,7 @@ const Navbar = () => {
       initial="hidden"
       animate="visible"
       variants={containerVariants}
-      className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-primary/10 apple-shadow"
+      className="sticky top-0 z-50 bg-background/85 backdrop-blur-md border-b border-border/70 apple-shadow"
     >
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">

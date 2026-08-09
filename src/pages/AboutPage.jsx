@@ -95,15 +95,37 @@ const AboutPage = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-8"
+          className="relative overflow-hidden rounded-2xl border border-border/70 bg-card/70 p-6 sm:p-10 md:p-14 text-left shadow-2xl"
         >
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 text-foreground">
-            R00KE0
-          </h1>
-          <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed px-2">
-            A Cybersecurity Engineer with experience in offensive security, penetration testing, and
-            red team operations.
-          </p>
+          <div className="absolute right-0 top-0 h-full w-1/3 bg-gradient-to-l from-accent/10 to-transparent pointer-events-none" />
+          <div className="relative max-w-3xl">
+            <p className="mb-4 font-mono text-xs uppercase tracking-[0.3em] text-primary">
+              Offensive security / backend engineering
+            </p>
+            <h1 className="max-w-3xl text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight text-foreground text-balance">
+              Quietly finding the weaknesses others miss.
+            </h1>
+            <p className="mt-6 max-w-2xl text-base sm:text-lg text-muted-foreground leading-relaxed">
+              I&apos;m R00KE0, a cybersecurity engineer focused on penetration testing, red team
+              operations, and resilient backend systems.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a
+                href="/projects"
+                className="inline-flex items-center rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5"
+              >
+                Explore projects
+              </a>
+              <a
+                href="https://github.com/R00KE0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center rounded-lg border border-border px-5 py-3 text-sm font-semibold text-foreground hover:border-primary/60 hover:text-primary"
+              >
+                View GitHub
+              </a>
+            </div>
+          </div>
         </motion.div>
 
         <motion.div
