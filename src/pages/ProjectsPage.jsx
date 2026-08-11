@@ -69,7 +69,7 @@ const ProjectsPage = () => {
       icon: Code,
       tags: ['Backend Development', 'API Security', 'Code'],
       status: 'COMPLETED',
-      impact: 'OWASP top 10 best practices implementation',
+      impact: 'OWASP top 10 best practices implementation, API best practicies',
       threatLevel: 'HIGH',
       duration: '2 months',
       scope: 'Software Development',
