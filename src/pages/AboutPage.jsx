@@ -103,7 +103,7 @@ const AboutPage = () => {
               Offensive security / backend engineering
             </p>
             <h1 className="max-w-3xl text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight text-foreground text-balance">
-              Quietly finding the weaknesses others miss.
+              In theory, theory and practice are the same. In practice, they are not.
             </h1>
             <p className="mt-6 max-w-2xl text-base sm:text-lg text-muted-foreground leading-relaxed">
               I&apos;m R00KE0, a cybersecurity engineer focused on penetration testing, red team
