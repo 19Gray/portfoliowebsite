@@ -106,8 +106,7 @@ const AboutPage = () => {
               In theory, theory and practice are the same. In practice, they are not.
             </h1>
             <p className="mt-6 max-w-2xl text-base sm:text-lg text-muted-foreground leading-relaxed">
-              I&apos;m R00KE0, a cybersecurity engineer focused on penetration testing, red team
-              operations, and resilient backend systems.
+              HELLO FR3ND ...&apos;
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
@@ -143,13 +142,13 @@ const AboutPage = () => {
               Professional Background
             </h2>
             <p className="text-muted-foreground mb-3 sm:mb-4 text-xs sm:text-sm leading-relaxed">
-              Specialized in offensive security operations with extensive experience in penetration
-              testing, vulnerability assessment, and cyber operations across various industries
-              including finance, healthcare, and business sectors.
-            </p>
-            <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">
-              Passionate about staying ahead of emerging threats and developing innovative security
-              solutions to protect organizations from sophisticated cyber attacks.
+              Offensive security specialist with hands-on experience across penetration testing,
+              vulnerability assessment, and red team operations for organizations in finance,
+              healthcare, and business services. I focus on finding the gaps attackers would exploit
+              before they do — combining technical depth with a practical understanding of how real
+              breaches happen. I stay close to the threat landscape, constantly testing new
+              techniques and tools against evolving attack surfaces, and I'm driven by building
+              security solutions that hold up under real-world pressure, not just checklists.
             </p>
           </motion.div>
         </motion.div>
